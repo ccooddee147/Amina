@@ -15,48 +15,47 @@
             font-family: 'Comic Sans MS', 'Comic Sans', cursive;
             margin: 0;
             transition: background 1s ease-in-out;
+            overflow: hidden;
         }
         .message-box {
             text-align: center;
             background: #34495e;
-            padding: 10px; /* Reduced padding for smaller screens */
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background 1s ease-in-out;
-            width: 90%; /* Responsive width */
-            max-width: 350px; /* Smaller max width */
-            max-height: 80%; /* Max height for better fit on smaller screens */
-            overflow-y: auto; /* Enable scrolling if content overflows */
+            width: 90%;
+            max-width: 320px;
         }
         h1 {
-            font-size: 1.8em; /* Slightly smaller font */
+            font-size: 1.5em;
             color: #f1c40f;
             margin: 0 0 10px 0;
         }
         p {
-            font-size: 0.9em; /* Slightly smaller font */
+            font-size: 0.8em;
             margin: 10px 0;
         }
         #birthdayMessage {
             display: none;
-            font-size: 1em; /* Slightly smaller font */
+            font-size: 0.9em;
             color: #e74c3c;
-            margin-top: 20px;
+            margin-top: 15px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
         #birthdayVideo {
             display: none;
-            width: 100%; /* Full width for responsiveness */
-            max-width: 300px; /* Smaller max width */
-            height: auto; /* Maintain aspect ratio */
-            margin-top: 20px;
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin-top: 15px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
         button {
-            padding: 8px 16px; /* Slightly smaller padding */
-            font-size: 0.9em; /* Slightly smaller font size */
+            padding: 6px 12px;
+            font-size: 0.8em;
             cursor: pointer;
             border: none;
             background-color: #e74c3c;

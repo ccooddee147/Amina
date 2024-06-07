@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise!</title>
+    <title>Sorpresa!</title>
     <style>
         body {
             display: flex;
@@ -39,6 +39,14 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
+        #birthdayVideo {
+            display: none;
+            width: 360px; /* Adjusted width */
+            height: 600px; /* Adjusted height */
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
         button {
             padding: 10px 20px;
             font-size: 1.2em;
@@ -63,20 +71,26 @@
     <div class="message-box">
         <h1>❓ Sorpresa ❓</h1>
         <p></p>
-        <button onclick="showMessage()">Cliccami</button>
-        <p id="birthdayMessage">🎂 Happy Birthday, Amina 🎂<br> كل عام وأنتي بخير   🎉💖</p>
+        <button onclick="showMessage()">Cliccami!</button>
+        <p id="birthdayMessage">🎂 Happy Birthday Amina  🎂<br> 💙 كل عام و نتي بخير و بصحة جيدة و اتمنى لك النجاح و التوفيق في مسيرتك  💙</p>
+        <video id="birthdayVideo" controls>
+            <source src="amina.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <script>
         function showMessage() {
             document.getElementById('birthdayMessage').style.display = 'block';
+            document.getElementById('birthdayVideo').style.display = 'block';
             setTimeout(() => {
                 document.getElementById('birthdayMessage').style.opacity = 1;
+                document.getElementById('birthdayVideo').style.opacity = 1;
             }, 10);
 
             document.body.style.background = 'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)';
             document.querySelector('.message-box').style.background = '#ffffff';
-            document.querySelector('.message-box h1').innerText = '🎉 Happy Birthday! 🎉';
+            document.querySelector('.message-box h1').innerText = '🎉 Buon Compleanno! 🎉';
             document.querySelector('.message-box p').style.display = 'none';
             document.querySelector('button').style.display = 'none';
         }

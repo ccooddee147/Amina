@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            overflow: hidden;
+            transition: background 1s ease-in-out;
+        }
+        .message-box {
+            text-align: center;
+            background: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 1s ease-in-out;
+        }
+        h1 {
+            font-size: 3em;
+            color: #f1c40f;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        #birthdayMessage {
+            display: none;
+            font-size: 2em;
+            color: #e74c3c;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+        .hidden-message {
+            display: none;
+            color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>❓ Sorpresa ❓</h1>
+        <p></p>
+        <button onclick="showMessage()">Cliccami</button>
+        <p id="birthdayMessage">🎂 Happy Birthday, Amina 🎂<br> كل عام وأنتي بخير   🎉💖</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('birthdayMessage').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('birthdayMessage').style.opacity = 1;
+            }, 10);
+
+            document.body.style.background = 'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)';
+            document.querySelector('.message-box').style.background = '#ffffff';
+            document.querySelector('.message-box h1').innerText = '🎉 Happy Birthday! 🎉';
+            document.querySelector('.message-box p').style.display = 'none';
+            document.querySelector('button').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

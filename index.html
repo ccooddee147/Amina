@@ -13,23 +13,23 @@
             background: #2c3e50;
             color: #ecf0f1;
             font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-            overflow: hidden;
             margin: 0;
             transition: background 1s ease-in-out;
         }
         .message-box {
             text-align: center;
             background: #34495e;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background 1s ease-in-out;
-            max-width: 90%;
+            width: 90%;
+            max-width: 400px;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             color: #f1c40f;
-            margin: 0;
+            margin: 0 0 10px 0;
         }
         p {
             font-size: 1em;
@@ -37,7 +37,7 @@
         }
         #birthdayMessage {
             display: none;
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #e74c3c;
             margin-top: 20px;
             opacity: 0;
@@ -45,8 +45,8 @@
         }
         #birthdayVideo {
             display: none;
-            width: 100%; /* Adjusted width for responsiveness */
-            max-width: 360px; /* Max width to maintain aspect ratio */
+            width: 100%; /* Full width for responsiveness */
+            max-width: 320px; /* Max width for better fit on small screens */
             height: auto; /* Maintain aspect ratio */
             margin-top: 20px;
             opacity: 0;
